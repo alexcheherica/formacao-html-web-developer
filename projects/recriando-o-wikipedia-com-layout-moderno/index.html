@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout1.css">
+    <link rel="stylesheet" href="">
+
+    <title>Desafio de projeto 3 - Formação HTML Web Developer</title>
+
+
+</head>
+
+<body>
+    <!-- Header global com busca -->
+    <header role="banner">
+        <div class="topbar" aria-label="Barra superior">
+            <div class="logo"><a href="index.html" aria-label="Página inicial Animepedia">Animepedia</a></div>
+            <div></div>
+            <form action="#" onsubmit="alert('Busca apenas ilustrativa no protótipo'); return false;">
+                <input id="q" name="q" type="search" placeholder="Pesquisar animes" aria-label="Pesquisar artigos" />
+                <button type="submit" class="btn" aria-label="Executar busca">Buscar</button>
+            </form>
+        </div>
+
+
+    </header>
+
+    <div class="conteiner">
+        <aside class="sidebar" aria-labelledby="menu-title">
+            <h2 id="menu-title" class="side-title">Conteúdos</h2>
+            <!-- navegação lateral -->
+            <nav aria-label="Navegação lateral">
+                <ul>
+                    <li><a href="attack-on-titan.html">Attack On Titan</a></li>
+                    <li><a href="demon-slayer.html">Demon Slayer</a></li>
+                    <li><a href="apothecary-diaries.html">The Apothecary Diaries</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="conteudo" role="main">
+            <article aria-labelledby="titulo-artigo">
+                <header>
+                    <h1 id="titulo-artigo">Conheça os meus top 3 de animes da atualidade</h1>
+                    <p class="lead" style="color: var(--text-muted)">Artigo enciclopédico com layout moderno inspirado
+                        na Wikipedia.</p>
+
+                </header>
+
+                <aside class="infobox" role="complementary" aria-label="Informações rápidas">
+                    <header><strong>Informações rápidas</strong></header>
+                    <figure>
+                        <img src="images/anime.jpg.jpg"
+                            alt="capa dos animes Attack on Titan, Demon Slayer e The Apothecary Diaries"
+                            style="width:100%; display:block;" />
+                        <figcaption>Capa Animes</figcaption>
+                    </figure>
+                    <table aria-label="Tabela de informações rápidas">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Animes</th>
+                                <td>
+                                    <i>Attack On Titan</i><br>
+                                    <i>Demon Slayer</i><br>
+                                    <i>The Apothecary Diaries</i>
+                                </td>
+                        </tbody>
+                    </table>
+                </aside>
+
+                <section id="introducao" aria-labelledby="h-introducao">
+                    <h2 id="h-introducao">Introdução</h2>
+                    <p>Se você é apaixonado por boas histórias, personagens marcantes e mundos que nos fazem esquecer da
+                        realidade, este artigo é pra você. Os animes têm conquistado cada vez mais espaço no coração dos
+                        fãs — e entre tantos títulos incríveis, três se destacam como verdadeiras joias da atualidade.
+
+                        Attack on Titan nos leva a um universo brutal e cheio de mistérios, onde a luta pela
+                        sobrevivência é constante e cada revelação muda tudo o que achávamos saber. Já Demon Slayer
+                        combina ação intensa com uma estética deslumbrante, enquanto nos emociona com a jornada de
+                        Tanjiro em busca de redenção e justiça. Por fim, The Apothecary Diaries oferece uma experiência
+                        única: uma trama inteligente e delicada, ambientada em um palácio imperial, onde a protagonista
+                        desvenda segredos com astúcia e sensibilidade.
+
+                        Esses três animes representam diferentes estilos e atmosferas, mas têm algo em comum: todos são
+                        capazes de prender nossa atenção, mexer com nossas emoções e deixar aquela vontade de assistir
+                        “só mais um episódio”. Neste projeto aproveitei para compartilha um pouco sobre cada um deles.</p>
+
+                </section>
+
+
+            </article>
+
+        </main>
+
+
+
+    </div>
+
+    <!--Rodápe  -->
+    <footer role="contentinfo">
+        <p>Site criado por Alexchê Hérica | 2025</p>
+        <small>Animepedia é um projeto educacional sem fins lucrativos para estudo de semântica e acessibilidade, faz
+            parte do desafio de projeto do bootcamp Formação HTML Web Developer.</small>
+    </footer>
+
+</body>
+
+</html>

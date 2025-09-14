@@ -1,0 +1,281 @@
+* {}
+
+/* --- Reset básico e variáveis --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --bg: #ffffff;
+    --muted: #f3f4f6;
+    --text: #111827;
+    --text-muted: #4b5563;
+    --border: #e5e7eb;
+    --link: #2563eb;
+    --link-visited: #2563eb;
+    --accent: #111827;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Link de pular para conteúdo (acessibilidade) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--bg);
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: .5rem;
+    top: .5rem;
+    box-shadow: var(--shadow);
+}
+
+/* --- Header --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: saturate(1.2) blur(6px);
+    background: color-mix(in oklab, var(--bg) 75%, transparent);
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.logo a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.search {
+    flex: 1;
+}
+
+.search form {
+    display: flex;
+    gap: .5rem;
+}
+
+.search input[type="search"] {
+    width: 100%;
+    padding: .6rem .8rem;
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    background: var(--muted);
+    color: var(--text);
+}
+
+.btn {
+    padding: .55rem .9rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    border-radius: .75rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.btn:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+}
+
+/* --- Layout principal --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 260px 1fr;
+    padding: 1rem;
+}
+
+aside {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+    background: var(--muted);
+}
+
+main {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background: color-mix(in oklab, var(--bg), var(--muted) 10%);
+}
+
+/* Sidebar */
+.side-title {
+    font-size: .9rem;
+    color: var(--text-muted);
+    margin-top: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin: .35rem 0;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: var(--text);
+    border-radius: .5rem;
+    padding: .35rem .5rem;
+    display: block;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus {
+    background: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+/* TOC */
+.toc {
+    border: 1px dashed var(--border);
+    border-radius: .75rem;
+    padding: .75rem;
+    background: var(--bg);
+}
+
+.toc h2 {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.toc ol {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+/* Tipografia do artigo */
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: .2rem 0 .75rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin: .5rem 0 1rem;
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+
+.infobox {
+    float: right;
+    width: min(320px, 100%);
+    margin: 0 0 1rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    background: var(--muted);
+    overflow: hidden;
+}
+
+.infobox header {
+    position: static;
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    padding: .5rem .75rem;
+    border-radius: 0;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .95rem;
+}
+
+.infobox th,
+.infobox td {
+    padding: .5rem .75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+/* Links */
+a {
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+    border-radius: .25rem;
+}
+
+/* Citações/caixas */
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+    padding: 1.25rem;
+    text-align: center;
+    color: var(--text-muted);
+}

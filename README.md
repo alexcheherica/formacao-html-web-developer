@@ -10,13 +10,12 @@ Oi! Eu sou **Alexchê Hérica (Tchê)**, estudante de Ciências da Computação 
 - Aprender mais sobre HTML  
 - Garantir meu certificado
 
-## 📁 O que tem aqui
-- `/modules/` — cursos organizados por módulos  
+## 📁 O que tem aqui 
 - `/projects/` — desafios de projetos, desafios de códigos que desenvolvi  
 - `/certificates/` — meus certificados
     
 ## 📝 Como navegar
-Basta explorar as pastas `modules/`, `projects/` e `certificates/`! Cada projeto tem um README com as instruções para rodar e testar.
+Basta explorar as pastas `projects/` e `certificates/`! Cada projeto tem um README com as instruções para rodar e testar.
 
 ## 🔧 Ferramentas que uso
 - Git e GitHub  
